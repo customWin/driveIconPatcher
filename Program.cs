@@ -11,8 +11,12 @@ namespace driveIconPatcher
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] a)
         {
+            var args = a.ToList();
+            args.Remove(a[0]);
+            var arg0 = a[0];
+
             Console.WriteLine("      _      _           _____                _____      _       _               \r\n" +
                               "     | |    (_)         |_   _|              |  __ \\    | |     | |              \r\n" +
                               "   __| |_ __ ___   _____  | |  ___ ___  _ __ | |__) |_ _| |_ ___| |__   ___ _ __ \r\n" +
@@ -25,19 +29,19 @@ namespace driveIconPatcher
             Console.WriteLine("");
 
 
-            Console.WriteLine($"Patching {args[0]}...");
-            Console.WriteLine($"Specified icon: {args[1]}");
+            Console.WriteLine($"Patching {arg0}...");
+            Console.WriteLine($"Specified icon: {String.Join("", args)}");
             try
             {
                 var driveicons = Registry.LocalMachine.OpenSubKey("SOFTWARE", true).OpenSubKey("Microsoft", true)
                     .OpenSubKey("Windows", true).OpenSubKey("CurrentVersion", true).OpenSubKey("Explorer", true).OpenSubKey("DriveIcons", true);
 
-                var drive = driveicons.CreateSubKey(args[0].Remove(1));
+                var drive = driveicons.CreateSubKey(arg0.Remove(1));
                 var deficon = drive.CreateSubKey("DefaultIcon");
 
-                deficon.SetValue("", $"\"{args[1]}\"");
+                deficon.SetValue("", $"\"{String.Join(" ", args)}\"");
 
-                Console.WriteLine($"Successfully patched {args[0]} with {args[1]}!");
+                Console.WriteLine($"Successfully patched {arg0} with {String.Join("", args)}!");
             }
             catch (Exception e)
             {
