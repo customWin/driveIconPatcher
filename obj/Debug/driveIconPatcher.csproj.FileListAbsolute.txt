@@ -1,0 +1,7 @@
+D:\Desktop\Visual Studio Projects\customIcons\driveIconPatcher\obj\Debug\driveIconPatcher.csproj.AssemblyReference.cache
+D:\Desktop\Visual Studio Projects\customIcons\driveIconPatcher\obj\Debug\driveIconPatcher.csproj.CoreCompileInputs.cache
+D:\Desktop\Visual Studio Projects\customIcons\driveIconPatcher\bin\Debug\driveIconPatcher.exe.config
+D:\Desktop\Visual Studio Projects\customIcons\driveIconPatcher\bin\Debug\driveIconPatcher.exe
+D:\Desktop\Visual Studio Projects\customIcons\driveIconPatcher\bin\Debug\driveIconPatcher.pdb
+D:\Desktop\Visual Studio Projects\customIcons\driveIconPatcher\obj\Debug\driveIconPatcher.exe
+D:\Desktop\Visual Studio Projects\customIcons\driveIconPatcher\obj\Debug\driveIconPatcher.pdb
